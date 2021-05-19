@@ -6,7 +6,7 @@
 s = "leetcodeisacommunityforcoders"
 
 const removeVowels = (s) => {
-  let vowels = ['a', 'e', 'i', 'o', 'u']
+  // let vowels = ['a', 'e', 'i', 'o', 'u']
   let noVowelsArr = []
   let sArr = s.split("")
   let newArr = sArr.filter( letter => {
