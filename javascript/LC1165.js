@@ -21,7 +21,7 @@ const calcTime = (keyboard, word) => {
   let keyboardArr = keyboard.split("")
   return wordArr.forEach((letter) => {
     // this works...
-    // console.log(keyboardArr.indexOf(letter))
+    console.log(keyboardArr.indexOf(letter))
 
     // this returns undefined...
     return keyboardArr.indexOf(letter)
