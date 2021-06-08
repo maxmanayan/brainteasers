@@ -1,3 +1,5 @@
+// SOLVED
+
 // Leetcode 1119 - remove vowels from a string
 
 // Input: s = "leetcodeisacommunityforcoders"

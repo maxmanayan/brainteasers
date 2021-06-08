@@ -1,3 +1,5 @@
+// Solved
+
 // Leetcode 1165 - Single-Row Keyboard
 
 // There is a special keyboard with all keys in a single row.
@@ -19,14 +21,23 @@ word = "cba"
 const calcTime = (keyboard, word) => {
   let wordArr = word.split("")
   let keyboardArr = keyboard.split("")
-  return wordArr.forEach((letter) => {
-    // this works...
-    console.log(keyboardArr.indexOf(letter))
-
-    // this returns undefined...
-    return keyboardArr.indexOf(letter)
+  let indexArr = [0]
+  wordArr.forEach((letter) => {
+    let index = keyboardArr.indexOf(letter)
+    return indexArr.push(index)
   })
-  return 0
+  sumArr = []
+  indexArr.forEach((num, i) => {
+    if (indexArr[i] < indexArr[i+1]) {
+      sumArr.push(indexArr[i+1] - indexArr[i])
+    } else if (indexArr[i] > indexArr[i+1]) {
+      sumArr.push(indexArr[i] - indexArr[i+1])
+    }
+  })
+  let sum = sumArr.reduce((acc, num) => {
+    return acc + num
+  }, 0)
+  return sum
 }
 
 
