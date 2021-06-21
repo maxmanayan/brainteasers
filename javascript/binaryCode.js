@@ -1,3 +1,5 @@
+
+
 S = "011100"
 
 const solution = (S) => {
@@ -22,7 +24,7 @@ const solution = (S) => {
 
   // baseTenNum = parseInt(S, 2)
 
-  baseTenNum = 10000000000000000
+  // baseTenNum = 10000000000000000
   let count = 0
 
   // while (baseTenNum > 10000000000000000) {
