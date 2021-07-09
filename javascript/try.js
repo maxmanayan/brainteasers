@@ -43,19 +43,3 @@
 // };
 
 // console.log(almost_palindrome(str));
-
-nums = [1, 2, 3];
-const can_reach_end = function (nums) {
-  reachesEnd = false;
-  for (let i = 0; i <= nums.length - 1; i++) {
-    if (nums[i] > nums.length - 1) {
-      reachesEnd = true;
-    }
-    if (nums[0] === 0) {
-      reachesEnd = false;
-    }
-  }
-  return reachesEnd;
-};
-
-console.log(can_reach_end(nums));
