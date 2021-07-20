@@ -23,14 +23,13 @@ const isValid = (s) => {
     return false;
   }
   let count = 0;
-  let maxCount = s.split("").length / 2;
   let validBrackets = ["[]", "{}", "()"];
   let sTest = s;
   let sTestMeasure = sTest;
   validBrackets.forEach((bracket) => {
     sTest = sTest.replace(bracket, "");
   });
-  while (count < maxCount) {
+  while (count < s.split("").length / 2) {
     if (sTestMeasure !== sTest && sTest !== "") {
       sTestMeasure = sTest;
       validBrackets.forEach((bracket) => {
