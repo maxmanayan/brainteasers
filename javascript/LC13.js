@@ -19,15 +19,23 @@ const translation = {
   I: 1,
 };
 
-let s = "III";
+let s = "CMXCIV";
 
 const romanToInt = (s) => {
   let sArr = s.split("");
-  let total;
+  let total = 0;
   for (let i = 0; i < sArr.length; i++) {
-    console.log(typeof translation.I, sArr[i]);
+    let curNum = sArr[i];
+    let nextNum = sArr[i + 1];
+
+    if (sArr.length - i > 1 && translation[curNum] < translation[nextNum]) {
+      total = total + (translation[nextNum] - translation[curNum]);
+      i += 1;
+    } else {
+      total = total + translation[curNum];
+    }
   }
-  return sArr;
+  return total;
 };
 
 console.log(romanToInt(s));
