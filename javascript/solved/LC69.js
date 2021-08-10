@@ -13,7 +13,7 @@
 // Output: 2
 // Explanation: The square root of 8 is 2.82842..., and since the decimal part is truncated, 2 is returned.
 
-let x = 3;
+let x = 5;
 
 const mySqrt = (x) => {
   if (x < 2) return x;
